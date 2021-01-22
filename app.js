@@ -1,6 +1,6 @@
 const mail=require('yargs').argv;
 const sgMail= require('@sendgrid/mail');
-const API_KEY='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';
+const API_KEY=mail._[1];
 const receiver=mail._[0];
 sgMail.setApiKey(API_KEY);
 const message={
