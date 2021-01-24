@@ -1,7 +1,6 @@
 const mail=require('yargs').argv;
-require('dotenv').config();
 const sgMail= require('@sendgrid/mail');
-const API_KEY=process.env.API_KEY;
+const API_KEY=mail._[1];
 const receiver=mail._[0];
 sgMail.setApiKey(API_KEY);
 const message={
@@ -15,4 +14,3 @@ sgMail
 .send(message)
 .then((response) =>console.log('Email sent!!!!'))
 .catch((err) => console.log(err.message));
- 
